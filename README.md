@@ -4,9 +4,9 @@
 
 ## Задание 1
 
-### Настройки router
-
 Переделанная схема: keepalived/hsrp_advanced.pkt
+
+### Настройки router
 
 ![Скриншот настройки в программе "Cisco packet tracer" router1](router.png)
 *Cisco packet tracer.*
