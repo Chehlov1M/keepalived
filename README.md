@@ -32,7 +32,6 @@
 
 ## Создание Bash‑скрипта проверки
 
-
 Содержимое файла `/usr/local/bin/check_webserver.sh`:
 
 ```sh
@@ -57,13 +56,7 @@ fi
 # Если всё в порядке
 echo "OK: Web server and index.html are available"
 exit 0
-
-
-
-
-
-
-
+```
 ## Настройка VIP в Keepalived
 
 Содержимое файла `/etc/keepalived/keepalived.conf`:
