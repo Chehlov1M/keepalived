@@ -30,6 +30,39 @@
 ![Логи задания test-pipeline]
 *Вывод команд: `echo`, `uname -a`, `whoami`.*
 
+## Создание Bash‑скрипта проверки
+
+
+Содержимое файла `/usr/local/bin/check_webserver.sh`:
+
+```sh
+
+# Конфигурация
+WEB_PORT=80
+WEB_ROOT="/var/www/html"
+INDEX_FILE="index.html"
+
+# Проверка существования файла index.html
+if [ ! -f "${WEB_ROOT}/${INDEX_FILE}" ]; then
+    echo "ERROR: File ${INDEX_FILE} not found in ${WEB_ROOT}"
+    exit 1
+fi
+
+# Проверка доступности порта веб‑сервера
+if ! nc -z -w 3 localhost ${WEB_PORT}; then
+    echo "ERROR: Web server port ${WEB_PORT} is not accessible"
+    exit 1
+fi
+
+# Если всё в порядке
+echo "OK: Web server and index.html are available"
+exit 0
+
+
+
+
+
+
 
 ## Настройка VIP в Keepalived
 
