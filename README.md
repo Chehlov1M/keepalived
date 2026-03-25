@@ -31,17 +31,36 @@
 *Вывод команд: `echo`, `uname -a`, `whoami`.*
 
 
-## Конфигурация GitLab CI/CD
+## Настройка VIP в Keepalived
 
-Содержимое файла `gitlab-ci.yml`:
+Содержимое файла `/etc/keepalived/keepalived.conf`:
 
+VM1 (MASTER):
+```conf
+vrrp_instance VI_1 {
+    state BACKUP
+    interface eth0
+    virtual_router_id 15
+    priority 255
+    nopreempt
 
-```yaml
-test-docker:
-  tags:
-    - docker
-  script:
-    - echo "Running in Docker container!"  # Тестовый вывод
-    - docker --version                  # Версия Docker
-    - uname -a                         # Информация о системе
-    - whoami                         # Текущий пользователь
+    virtual_ipaddress {
+        192.168.111.15/24 dev eth0
+    }
+}
+
+```
+VM2 (BACKUP):
+```conf
+vrrp_instance VI_1 {
+    state BACKUP
+    interface eth0
+    virtual_router_id 15
+    priority 100
+    nopreempt
+
+    virtual_ipaddress {
+        192.168.111.15/24 dev eth0
+    }
+}
+
