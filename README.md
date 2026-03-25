@@ -4,13 +4,14 @@
 
 ## Задание 1
 
-### Настройки раннера
+### Настройки router
 
-![Страница Settings → CI/CD → Runners]
-*Статус раннера — active (зелёная точка), теги: `docker`, `ubuntu`.*
+![Изменненая схема](hsrp_advanced.pkt)
+*Статус раннера — active (зелёная точка), теги: `nginx`, `keepalived`.*
 
-![Вывод команды gitlab-runner list]
-*Раннер зарегистрирован с ID #1 (`5vm1Sof3W`).*
+![Скриншот настройки в программе "Cisco packet tracer" router1](router.png)
+*Cisco packet tracer.*
+
 
 ## Задание 2
 
@@ -21,13 +22,13 @@
 
 ### Веб-страница с запущенным сервером 
 
-![Вывод команд gitlab-runner status, git status](server_compute_vm_1.png)
-*compute-vm-2-5-10-hdd-1774417281109 (`(VM-1)`).*
+![ВМ-1](server_compute_vm_1.png)
+*compute-vm-2-5-10-hdd-1774417281109 (VM-1).*
 
-### Веб-страница с запущенным сервером и переадресацией с плавующим ip
+### Веб-страница с запущенным сервером и переадресацией с плавающим IP-адресом.
 
-![Логи задания test-pipeline](server_compute_vm_2.png)
-*compute-vm-2-5-10-hdd-1774417411166 (`(VM-2)`).*
+![ВМ-2](server_compute_vm_2.png)
+*compute-vm-2-5-10-hdd-1774417411166 (VM-2).*
 
 ## Создание Bash‑скрипта проверки
 
