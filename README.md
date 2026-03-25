@@ -6,9 +6,6 @@
 
 ### Настройки router
 
-![Изменненая схема](hsrp_advanced.pkt)
-*Статус раннера — active (зелёная точка), теги: `nginx`, `keepalived`.*
-
 ![Скриншот настройки в программе "Cisco packet tracer" router1](router.png)
 *Cisco packet tracer.*
 
