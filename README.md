@@ -9,6 +9,7 @@
 ![Скриншот настройки в программе "Cisco packet tracer" router1](router.png)
 *Cisco packet tracer.*
 
+hsrp_advanced.pkt
 
 ## Задание 2
 
